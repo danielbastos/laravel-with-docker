@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-install mysqli \
+    && docker-php-ext-install pdo_mysql \
+    && docker-php-ext-install intl \
+    && docker-php-ext-install zip

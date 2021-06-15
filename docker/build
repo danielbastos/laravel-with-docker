@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build -t laravel:8-apache -f ./8-apache.Dockerfile .
+docker build -t laravel:8-apache-debug -f ./8-apache.xdebug.Dockerfile .
